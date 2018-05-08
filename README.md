@@ -131,7 +131,7 @@ extension MyViewController: UITableViewDataSource {
 
 // MARK: - UIScrollViewDelegate
 extension MyViewController: UIScrollViewDelegate {
-  	// scroll view delegate methods
+	// scroll view delegate methods
 }
 ```
 
@@ -153,7 +153,7 @@ class MyViewController: UIViewController, UITableViewDataSource, UIScrollViewDel
 
 ```swift
 override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return Database.contacts.count
+	return Database.contacts.count
 }
 ```
 
@@ -162,12 +162,12 @@ override func tableView(_ tableView: UITableView, numberOfRowsInSection section:
 ```swift
 override func didReceiveMemoryWarning() {
 	super.didReceiveMemoryWarning()
-  	// Dispose of any resources that can be recreated.
+	// Dispose of any resources that can be recreated.
 }
 
 override func numberOfSections(in tableView: UITableView) -> Int {
-    // #warning Incomplete implementation, return the number of sections
-  	return 1
+	// #warning Incomplete implementation, return the number of sections
+	return 1
 }
 
 override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -191,9 +191,9 @@ override func tableView(_ tableView: UITableView, numberOfRowsInSection section:
 
 ```swift
 if user.isHappy {
-    // Do something
+	// Do something
 } else {
-    // Do something else
+	// Do something else
 }
 ```
 
@@ -202,10 +202,10 @@ if user.isHappy {
 ```swift
 if user.isHappy
 {
-    // Do something
+	// Do something
 }
 else {
-    // Do something else
+	// Do something else
 }
 ```
 
@@ -240,7 +240,7 @@ else {
 ```swift
 /// 注意使用空格的位置
 class TestDatabase: Database {
-    var data: [String: CGFloat] = ["A": 1.2, "B": 3.2]
+	var data: [String: CGFloat] = ["A": 1.2, "B": 3.2]
 }
 ```
 
@@ -278,36 +278,36 @@ class Circle: Shape {
     var y: Int
   	var radius: Double
   	var diameter: Double {
-        get {
-            return radius * 2
+		get {
+			return radius * 2
         }
-    	set {
+		set {
 			radius = newValue / 2
-    	}
-    }
+		}
+	}
     
     init(x: Int, y: Int, radius: Double) {
-        self.x = x
-      	self.y = y
-      	self.radius = radius
+		self.x = x
+		self.y = y
+		self.radius = radius
     }
 
-    convenience init(x: Int, y: Int, diameter: Double) {
-      	self.init(x: x, y: y, radius: diameter / 2)
-  	}
+	convenience init(x: Int, y: Int, diameter: Double) {
+		self.init(x: x, y: y, radius: diameter / 2)
+	}
 
-  	override func area() -> Double {
-      	return Double.pi * radius * radius
-  	}
+	override func area() -> Double {
+		return Double.pi * radius * radius
+	}
 }
 
 extension Circle: CustomStringConvertible {
-  	var description: String {
-        return "center = \(_centerString) area = \(area())"
+	var description: String {
+		return "center = \(_centerString) area = \(area())"
   	}
-  	private var _centerString: String {
-    	return "(\(x),\(y))"
-  	}
+	private var _centerString: String {
+		return "(\(x),\(y))"
+	}
 }
 ```
 
@@ -331,7 +331,7 @@ extension Circle: CustomStringConvertible {
 
 ```swift
 var diameter: Double {
-    return radius * 2
+	return radius * 2
 }
 ```
 
@@ -339,9 +339,9 @@ var diameter: Double {
 
 ```swift
 var diameter: Double {
-    get {
-        return radius * 2
-    }
+	get {
+		return radius * 2
+	}
 }
 ```
 
@@ -357,7 +357,7 @@ var diameter: Double {
 
 ```swift
 func reticulateSplines(spline: [Double]) -> Bool {
-    /* code goes here */
+	/* code goes here */
 }
 ```
 
@@ -365,7 +365,7 @@ func reticulateSplines(spline: [Double]) -> Bool {
 
 ```swift
 func foo(arg: Int) {
-    /* code goes here */
+	/* code goes here */
 }
 ```
 
@@ -377,7 +377,7 @@ func foo(arg1: Int,
          arg3: String, 
          arg4: [Bool],
          arg5: () -> Void) {
-    /* code goes here */
+	/* code goes here */
 }
 ```
 
@@ -392,12 +392,12 @@ func foo(arg1: Int,
 ```swift
 // 参数列表尾部只有一个闭包参数
 UIView.animate(withDuration: 1.0) {
-    self.myView.alpha = 0
+	self.myView.alpha = 0
 }
 
 // 参数列表尾部有多个闭包参数
 UIView.animate(withDuration: 1.0, animations: {
-    self.myView.alpha = 0
+	self.myView.alpha = 0
 }, completion: { finished in
 	self.myView.removeFromSuperview()
 })
@@ -407,13 +407,13 @@ UIView.animate(withDuration: 1.0, animations: {
 
 ```swift
 UIView.animate(withDuration: 1.0, animations: {
-    self.myView.alpha = 0
+	self.myView.alpha = 0
 })
 
 UIView.animate(withDuration: 1.0, animations: {
-    self.myView.alpha = 0
+	self.myView.alpha = 0
 }) { finished in
-    self.myView.removeFromSuperview()
+	self.myView.removeFromSuperview()
 }
 ```
 
@@ -496,7 +496,7 @@ let l = 2 * Math.pi * r
 ```swift
 extension UIView {
     var foo: Int? {
-        return objc_getAssociatedObject(self, &_fooKey) as? Int
+		return objc_getAssociatedObject(self, &_fooKey) as? Int
     }
 }
 
@@ -518,7 +518,7 @@ var foo: Int?
 var bar: Bool?
 
 if let foo = foo, let bar = bar {
-    // 同时解包foo和bar后才会执行这里
+	// 同时解包foo和bar后才会执行这里
 }
 ```
 
@@ -529,9 +529,9 @@ var foo: Int?
 var bar: Bool?
 
 if let foo = foo {
-    if let bar = bar {
-       // 同时解包foo和bar后才会执行这里
-    }   
+	if let bar = bar {
+		// 同时解包foo和bar后才会执行这里
+	}   
 }
 ```
 
@@ -545,9 +545,9 @@ lazy var foo: SomeBigType = SomeBigType()
 
 // 对象需要进行配置时，使用{ ... }()这种形式
 lazy var bar: OtherBigType = { [unowned self] in
-    let obt = OtherBigType()
-    obt.delegate = self
-    return obt
+	let obt = OtherBigType()
+	obt.delegate = self
+	return obt
 }()
 ```
 
@@ -628,11 +628,11 @@ var faxNumber: Optional<Int>
 ```swift
 resource.request().onComplete { [weak self] response in
 	guard let strongSelf = self else {
-    	return
-    }
+		return
+	}
                                
 	let model = strongSelf.updateModel(response)
-  	strongSelf.updateUI(model)
+	strongSelf.updateUI(model)
 }
 ```
 
@@ -641,8 +641,8 @@ resource.request().onComplete { [weak self] response in
 ```swift
 // 当self的释放先于onComplete回调时，可能引起崩溃
 resource.request().onComplete { [unowned self] response in
-  	let model = self.updateModel(response)
-  	self.updateUI(model)
+	let model = self.updateModel(response)
+	self.updateUI(model)
 }
 ```
 
@@ -652,7 +652,7 @@ resource.request().onComplete { [unowned self] response in
 // 当self的释放介于updateModel()和updateUI()方法之间时，可能会出现意想不到的情况
 resource.request().onComplete { [weak self] response in
 	let model = self?.updateModel(response)
-  	self?.updateUI(model)
+	self?.updateUI(model)
 }
 ```
 
@@ -669,11 +669,11 @@ private var _isEnabled: Bool
 fileprivate var _isClosed: Bool
 
 private func _foo() {
-    // code goes here
+	// code goes here
 }
 
 fileprivate func _bar() {
-    // code goes here
+	// code goes here
 }
 ```
 
@@ -684,11 +684,11 @@ private var isEnabled: Bool
 fileprivate var isClosed: Bool
 
 private func foo() {
-    // code goes here
+	// code goes here
 }
 
 fileprivate func bar() {
-    // code goes here
+	// code goes here
 }
 ```
 
@@ -706,9 +706,9 @@ private let _message = "Great Scott!"
 
 class TimeMachine {  
     
-    @IBOutlet private var _lbTitle: UILabel!
+	@IBOutlet private var _lbTitle: UILabel!
     
-    @objc private func _foo() -> Bool {
+	@objc private func _foo() -> Bool {
         // code goes here
     }
 }
@@ -724,19 +724,19 @@ class TimeMachine {
 
 ```swift
 for _ in 0..<3 {
-    print("Hello three times")
+	print("Hello three times")
 }
 
 for (index, person) in attendeeList.enumerated() {
-  	print("\(person) is at position #\(index)")
+	print("\(person) is at position #\(index)")
 }
 
 for index in stride(from: 0, to: items.count, by: 2) {
-  	print(index)
+	print(index)
 }
 
 for index in (0...3).reversed() {
-  	print(index)
+	print(index)
 }
 ```
 
@@ -745,15 +745,15 @@ for index in (0...3).reversed() {
 ```swift
 var i = 0
 while i < 3 {
-    print("Hello three times")
-  	i += 1
+	print("Hello three times")
+	i += 1
 }
 
 var i = 0
 while i < attendeeList.count {
-    let person = attendeeList[i]
-  	print("\(person) is at position #\(i)")
-  	i += 1
+	let person = attendeeList[i]
+	print("\(person) is at position #\(i)")
+	i += 1
 }
 ```
 
@@ -767,7 +767,7 @@ while i < attendeeList.count {
 
 ```swift
 func check(phone: String?, name: String?, age: Int) -> Bool {
-    guard let ph = phone, ph.count > 0 else {
+	guard let ph = phone, ph.count > 0 else {
         return false
     }
     
