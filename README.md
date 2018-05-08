@@ -121,7 +121,7 @@ let colour = "red"
 
 ```swift
 class MyViewController: UIViewController {
-    // class stuff here
+	// class stuff here
 }
 
 // MARK: - UITableViewDataSource
@@ -139,7 +139,7 @@ extension MyViewController: UIScrollViewDelegate {
 
 ```swift
 class MyViewController: UIViewController, UITableViewDataSource, UIScrollViewDelegate {
-    // all methods
+	// all methods
 }
 ```
 
@@ -161,7 +161,7 @@ override func tableView(_ tableView: UITableView, numberOfRowsInSection section:
 
 ```swift
 override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
+	super.didReceiveMemoryWarning()
   	// Dispose of any resources that can be recreated.
 }
 
@@ -171,8 +171,8 @@ override func numberOfSections(in tableView: UITableView) -> Int {
 }
 
 override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // #warning Incomplete implementation, return the number of rows
-    return Database.contacts.count
+	// #warning Incomplete implementation, return the number of rows
+	return Database.contacts.count
 }
 ```
 
@@ -282,7 +282,7 @@ class Circle: Shape {
             return radius * 2
         }
     	set {
-      		radius = newValue / 2
+			radius = newValue / 2
     	}
     }
     
