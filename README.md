@@ -713,6 +713,7 @@ class TimeMachine {
 }
 ```
 
+> 参考规范: [0258-property-wrappers](https://github.com/gwynne/swift-evolution/blob/prop-wrapper-protocols/proposals/0258-property-wrappers.md)
 
 
 ### 控制流 (Control Flow)
